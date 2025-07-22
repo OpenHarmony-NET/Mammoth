@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+	<TargetFramework>net9.0</TargetFramework>
+    <AssemblyTitle>Mammoth</AssemblyTitle>
+    <Company>Michael Williamson</Company>
+    <Product>Mammoth</Product>
+    <Description>Convert Word documents from docx to simple HTML</Description>
+    <Copyright>Copyright 2015 - 2016 Michael Williamson</Copyright>
+    <Version>1.8.0</Version>
+    <Authors>Michael Williamson</Authors>
+    <PackageLicenseExpression>BSD-2-Clause</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/mwilliamson/dotnet-mammoth</PackageProjectUrl>
+    <PackageTags>docx html office word</PackageTags>
+  </PropertyGroup>
+    <ItemGroup>
+		<Compile Remove="Couscous/mammoth/internal/util/Objects.cs" />
+		<Compile Remove="Couscous/mammoth/internal/styles/parsing/StyleMapParser.cs" />
+	</ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.IO.Compression" Version="4.3.0" />
+  </ItemGroup>
+</Project>

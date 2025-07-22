@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+	<PublishAot>true</PublishAot>
+	<PublishTrimmed>true</PublishTrimmed>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TargetFramework>net9.0</TargetFramework>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	<InvariantGlobalization>true</InvariantGlobalization>
+	<AssemblyName>$(MSBuildProjectName.ToLower())</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="OpenHarmony.NET.Compiler.Pack" Version="0.0.0-alpha.5" />
+  </ItemGroup>
+	<ItemGroup>
+    <TrimmerRootAssembly Include="Mammoth" />
+    <ProjectReference Include="..\Mammoth.Core\Mammoth.Core.csproj" />
+    <ProjectReference Include="..\OpenHarmony.NDK.Bindings\OpenHarmony.NDK.Bindings.csproj" />
+  </ItemGroup>
+</Project>
